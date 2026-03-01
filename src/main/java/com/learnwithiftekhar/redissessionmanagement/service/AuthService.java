@@ -1,9 +1,9 @@
 package com.learnwithiftekhar.redissessionmanagement.service;
 
-import com.learnwithiftekhar.redissessionmanagement.dto.AuthenticationResponse;
-import com.learnwithiftekhar.redissessionmanagement.dto.LoginRequest;
-import com.learnwithiftekhar.redissessionmanagement.dto.RegistrationRequest;
-import com.learnwithiftekhar.redissessionmanagement.dto.TokenPair;
+import com.learnwithiftekhar.redissessionmanagement.dto.response.AuthenticationResponse;
+import com.learnwithiftekhar.redissessionmanagement.dto.request.LoginRequest;
+import com.learnwithiftekhar.redissessionmanagement.dto.request.RegistrationRequest;
+import com.learnwithiftekhar.redissessionmanagement.dto.response.TokenPair;
 import com.learnwithiftekhar.redissessionmanagement.model.User;
 import com.learnwithiftekhar.redissessionmanagement.repository.TokenRepository;
 import com.learnwithiftekhar.redissessionmanagement.repository.UserRepository;

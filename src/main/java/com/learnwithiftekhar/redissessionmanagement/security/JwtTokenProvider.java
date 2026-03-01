@@ -1,6 +1,6 @@
 package com.learnwithiftekhar.redissessionmanagement.security;
 
-import com.learnwithiftekhar.redissessionmanagement.dto.TokenPair;
+import com.learnwithiftekhar.redissessionmanagement.dto.response.TokenPair;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;

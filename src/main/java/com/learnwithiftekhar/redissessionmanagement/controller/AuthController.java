@@ -1,8 +1,8 @@
 package com.learnwithiftekhar.redissessionmanagement.controller;
 
-import com.learnwithiftekhar.redissessionmanagement.dto.LoginRequest;
-import com.learnwithiftekhar.redissessionmanagement.dto.RefreshTokenRequest;
-import com.learnwithiftekhar.redissessionmanagement.dto.RegistrationRequest;
+import com.learnwithiftekhar.redissessionmanagement.dto.request.LoginRequest;
+import com.learnwithiftekhar.redissessionmanagement.dto.request.RefreshTokenRequest;
+import com.learnwithiftekhar.redissessionmanagement.dto.request.RegistrationRequest;
 import com.learnwithiftekhar.redissessionmanagement.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

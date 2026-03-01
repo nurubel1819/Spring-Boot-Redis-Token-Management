@@ -1,4 +1,4 @@
-package com.learnwithiftekhar.redissessionmanagement.dto;
+package com.learnwithiftekhar.redissessionmanagement.dto.request;
 
 import com.learnwithiftekhar.redissessionmanagement.model.Role;
 import jakarta.persistence.EnumType;

@@ -1,9 +1,15 @@
 package com.learnwithiftekhar.redissessionmanagement.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@DynamicUpdate
 public class User {
 
     @Id
@@ -15,35 +21,12 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    public Long getId() {
-        return id;
-    }
+    @Column(
+            name = "mfa_enabled",
+            columnDefinition = "boolean default false"
+    )
+    private boolean mfaEnabled;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
+    @Column(name = "mfa_secret")
+    private String mfaSecret;
 }
