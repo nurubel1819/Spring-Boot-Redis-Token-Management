@@ -41,3 +41,8 @@ jwt:
 mfa:
   app:
     name: MFA-DEMO
+
+
+app:
+  security:
+    encryption-key : ZpQx8u1wK2v3b7s9nF4aQ6cJ0yL5rT2m8dH1sE9wX0A=
