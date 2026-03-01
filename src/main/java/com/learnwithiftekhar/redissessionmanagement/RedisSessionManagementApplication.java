@@ -16,7 +16,7 @@ public class RedisSessionManagementApplication {
         SpringApplication.run(RedisSessionManagementApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner commandLineRunner(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         return args -> {
             User user = new User();
@@ -25,5 +25,5 @@ public class RedisSessionManagementApplication {
             user.setRole(Role.ADMIN);
             userRepository.save(user);
         };
-    }
+    }*/
 }
