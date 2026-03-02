@@ -50,4 +50,27 @@ public class EncryptionService {
 
         return Base64.getEncoder().encodeToString(byteBuffer.array());
     }
+
+    public String decrypt(String encryptedText){
+        try {
+            byte[] decodedBytes = Base64.getDecoder().decode(encryptedText);
+            ByteBuffer byteBuffer = ByteBuffer.wrap(decodedBytes);
+
+            byte[] iv = new byte[IV_LENGTH_BYTES];
+            byteBuffer.get(iv);
+
+            byte[] cipherText = new byte[byteBuffer.remaining()];
+            byteBuffer.get(cipherText);
+
+            Cipher cipher = Cipher.getInstance(ALGORITHM);
+            cipher.init(Cipher.DECRYPT_MODE,secretKey,new GCMParameterSpec(TAG_LENGTH_BYTES,iv));
+
+            byte[] plainTextByte = cipher.doFinal(cipherText);
+
+            return new String(plainTextByte,StandardCharsets.UTF_8);
+
+        }catch (Exception e){
+            throw new RuntimeException("Decryption failed",e);
+        }
+    }
 }
